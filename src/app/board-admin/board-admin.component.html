@@ -1,0 +1,25 @@
+<div class="container">
+  <header class="jumbotron">
+  	<p>Checklist Items</p>
+    <table class="table table-striped">
+        <thead>
+         	<tr>
+               <th>Id</th>
+                <th>Name</th>
+                <th>Complete</th>
+                <th>Action</th>
+           	</tr>
+        </thead>
+        <tbody>
+           	<tr *ngFor="let item of items">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.checklistCompletionStatus}}</td>
+                <td>
+                	<button (click)="deleteItem(item.id)"class="btn btn-primary btn-sm ml-1"><i class="fa fa-trash"></i></button>
+                </td>
+           	</tr>
+        </tbody>
+    </table>
+  </header>
+</div>
